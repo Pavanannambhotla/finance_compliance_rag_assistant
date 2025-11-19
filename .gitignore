@@ -1,0 +1,28 @@
+# Python virtual env
+.venv/
+env/
+venv/
+
+# Chroma local DB + artifacts
+chroma_db/
+data/
+*.bin
+*.pyd
+*.so
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Environment variables
+.env
+
+# VS Code settings
+.vscode/
+
+# Local cache and logs
+*.log
+*.cache
+
+# OS files
+.DS_Store
