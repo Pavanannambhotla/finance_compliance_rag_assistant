@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>RAG Intelligence Console</title>
+  <link rel="stylesheet" href="/frontend/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+
+  <div class="container">
+
+    <!-- LEFT SIDEBAR -->
+    <aside class="sidebar">
+      <h1 class="logo">RAG<span>Console</span></h1>
+
+      <button class="btn neon" onclick="triggerFileUpload()">Upload Document</button>
+      <button class="btn outline" onclick="loadDBDocs()">View Database</button>
+
+      <div class="status-wrapper">
+        <span id="api-status" class="status-pill">Checking…</span>
+      </div>
+
+      <h2 class="side-heading">Database</h2>
+      <div id="db-doc-list" class="doc-list"></div>
+    </aside>
+
+    <!-- MAIN CHAT PANEL -->
+    <main class="chat-panel">
+
+      <div id="messages" class="chat-window"></div>
+
+      <form id="chat-form" class="input-bar">
+        <textarea id="question-input" placeholder="Ask your question…"></textarea>
+        <button id="send-btn" class="send-btn">Ask</button>
+      </form>
+
+      <input type="file" id="file-input" style="display:none" />
+
+    </main>
+
+    <!-- RIGHT PANEL -->
+    <aside class="right-panel hidden" id="db-chunks-viewer">
+      <h2 id="db-chunks-title"></h2>
+      <div id="db-chunks-content"></div>
+    </aside>
+
+  </div>
+
+  <script src="/frontend/app.js" defer></script>
+</body>
+</html>
